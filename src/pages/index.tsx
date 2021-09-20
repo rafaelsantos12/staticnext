@@ -1,12 +1,13 @@
 import { GetStaticProps } from "next";
-import Image from 'next/image'
 
 
-export default function Home({org}) {
+
+export default function Home({ org }) {
   return (
     <div>
-      <Image src={org.avatar_url } alt="Avatar"/>
+      <img src={org.avatar_url } alt="Avatar"  width="80" alt="Avatar" style={{ borderRadius: 40 }}/>
       <h1>{org.login}</h1>
+      <p>{org.bio}</p>
     </div> 
   ) 
 }
